@@ -53,14 +53,3 @@ src-tauri/src/
   ports.rs               lsof -F 파싱 (+ 유닛 테스트)
 src-tauri/gen_icon.py    앱 아이콘 생성 스크립트 (의존성 없음)
 ```
-
-## 아이콘 재생성
-
-```bash
-cd src-tauri && python3 gen_icon.py && pnpm --dir .. tauri icon src-tauri/icon-source.png
-```
-
-## 알려진 제약
-
-- 일부 프로세스 정보는 권한이 필요해 `lsof`에 안 잡힐 수 있음(권한 없이 조회 가능한 범위만 표시)
-- v1은 TCP LISTEN 소켓만 대상 (UDP/원격 미지원)
